@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Calculadora</title>
+    
+    <style>
+        .calculadora{
+            background-color:cadetblue;
+            width: 600px;
+            height: 300px;
+            margin: 100px auto;
+            padding: 30px 0 ;
+        }
+        input{
+            display: block;
+            width: 80%;
+            height: 50px;
+            margin: 15px auto;
+            text-align: right;
+            font-size: 30px;
+        }
+        .botones{
+            width: 70%;
+            margin: 30px auto;
+        }
+        button{
+            width: 33.3333333333%;
+            height: 30px;
+            float: left;
+        }
+        .aritmetica{
+            width: 40%;
+            float: right;
+            
+        }
+        .grande{
+            display: block;
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        let input = document.getElementById("display");
+        let digito = document.getElementsByClassName("digito");
+        input.value = 0;
+        
+
+        function numero(event){
+            if (input.value = 0){
+                input.value = event.target.textContent;
+            }
+            else{
+                input.value = input.value + event.target.textContent;
+            }
+        }
+
+        for (let iterator of digito) {
+            iterator.addEventListener("click",numero);
+        }
+    </script>
+    <section class="calculadora">
+        <section class="display">
+            <input type="text" class="display">
+        </section>
+        <section class="botones">
+            
+            <button class="digito">7</button>
+            <button class="digito">8</button>
+            <button class="digito">9</button>
+            
+            <button class="digito">4</button>
+            <button class="digito">5</button>
+            <button class="digito">6</button>
+            
+            <button class="aritmetica">/</button>
+            <button class="aritmetica">*</button>
+            <button class="digito">1</button>
+            <button class="digito">2</button>
+            <button class="digito">3</button>
+            <button class="aritmetica">+</button>
+            <button class="aritmetica">-</button>
+            <button class="digito grande">0</button>
+            
+            <button class="igual grande">=</button>
+        </section>
+    </section>
+</body>
+</html>
+

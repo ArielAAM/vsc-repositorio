@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primer pograma</title>
+    <style>
+        input{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        button{
+            display: block;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="display" id="display">
+    <button>tal</button>
+
+    <script>
+        let input = document.getElementById("display");
+        let boton = document.getElementsByTagName("button");
+        
+        console.log(input);
+        boton[0].addEventListener("click", ponTexto);
+        boton[0].addEventListener("focus", ponImagen);
+        boton[0].addEventListener("focusout",quitarImagen);
+
+        function quitarImagen(){
+            let quitar = document.getElementsByTagName(img);
+            document.body.removeChild(quitar);
+        }
+        
+        function ponImagen(){
+            let img = document.createElement('img');
+            img.src='imgs/caet.jpg';
+            document.body.appendChild(img);
+        }
+        function ponTexto(){
+            
+            input.value = "hehehehehehehehe";      
+            input.style.backgroundColor = "blue"; 
+            input.style.color = "white";
+            input.style.height = "90px";
+        }
+        
+    </script>
+</body>
+</html>
