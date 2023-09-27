@@ -47,11 +47,13 @@
     <script>
         let input = document.getElementById("display");
         let digito = document.getElementsByClassName("digito");
-        input.value = 0;
+
+        let x;
+     
         
 
         function numero(event){
-            if (input.value = 0){
+            if (input.value == 0){
                 input.value = event.target.textContent;
             }
             else{
@@ -65,7 +67,7 @@
     </script>
     <section class="calculadora">
         <section class="display">
-            <input type="text" class="display">
+            <input type="text" id="display">
         </section>
         <section class="botones">
             
