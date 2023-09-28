@@ -7,12 +7,34 @@
     <title>Prototipo Calculadora</title>
     
     <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            src: url('../fonts/BebasNeue-Regular.ttf');
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            font-size: 50px;
+            font-family:'Bebas Neue';
+            text-align: center;
+            
+        }
+        body{
+            
+            background-image: url("imgs/atardecer.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
         .calculadora{
             background-color:cadetblue;
-            width: 600px;
-            height: 300px;
+            width: 800px;
+            height: 400px;
             margin: 100px auto;
             padding: 30px 0 ;
+            border: solid 2px;
         }
         input{
             display: block;
@@ -26,21 +48,20 @@
             width: 70%;
             margin: 30px auto;
         }
+        .aritmetica{margin-bottom: 10px;width: 25%;}
         button{
             width: 33.3333333333%;
-            height: 30px;
+            height: 40px;
             float: left;
-        }
-        .aritmetica{
-            width: 40%;
-            float: right;
             
         }
+        
         .grande{
-            display: block;
-            width: 50%;
+            display: inline;
+            width: 37.5%;
         }
-
+        
+        
     </style>
 </head>
 <body>
@@ -65,12 +86,17 @@
             iterator.addEventListener("click",numero);
         }
     </script>
+    <header>Mi primera calculadora</header>
     <section class="calculadora">
         <section class="display">
             <input type="text" id="display">
         </section>
         <section class="botones">
-            
+
+            <button class="aritmetica">+</button>
+            <button class="aritmetica">-</button>
+            <button class="aritmetica">*</button>
+            <button class="aritmetica">/</button>
             <button class="digito">7</button>
             <button class="digito">8</button>
             <button class="digito">9</button>
@@ -79,16 +105,15 @@
             <button class="digito">5</button>
             <button class="digito">6</button>
             
-            <button class="aritmetica">/</button>
-            <button class="aritmetica">*</button>
+            
+            
             <button class="digito">1</button>
             <button class="digito">2</button>
             <button class="digito">3</button>
-            <button class="aritmetica">+</button>
-            <button class="aritmetica">-</button>
-            <button class="digito grande">0</button>
             
+            <button class="digito grande">0</button>
             <button class="igual grande">=</button>
+            
         </section>
     </section>
 </body>
