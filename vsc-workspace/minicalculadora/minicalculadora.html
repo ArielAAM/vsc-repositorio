@@ -21,6 +21,7 @@
             font-family:'Bebas Neue';
             text-align: center;
             
+            
         }
         body{
             
@@ -63,15 +64,12 @@
         
         
     </style>
-</head>
-<body>
     <script>
-        let input = document.getElementById("display");
-        let digito = document.getElementsByClassName("digito");
+        //evento 
+        window.onload = function(){
+        let input = document.querySelector("display");
+        let digito = document.querySelectorAll("button");
 
-        let x;
-     
-        
 
         function numero(event){
             if (input.value == 0){
@@ -85,7 +83,11 @@
         for (let iterator of digito) {
             iterator.addEventListener("click",numero);
         }
+    }
     </script>
+</head>
+<body>
+    
     <header>Mi primera calculadora</header>
     <section class="calculadora">
         <section class="display">
@@ -95,7 +97,7 @@
 
             <button class="aritmetica">+</button>
             <button class="aritmetica">-</button>
-            <button class="aritmetica">*</button>
+            <button class="aritmetica">X</button>
             <button class="aritmetica">/</button>
             <button class="digito">7</button>
             <button class="digito">8</button>
