@@ -19,9 +19,7 @@
         header{
             font-size: 50px;
             font-family:'Bebas Neue';
-            text-align: center;
-            
-            
+            text-align: center;    
         }
         body{
             
@@ -38,6 +36,7 @@
             border: solid 2px;
         }
         input{
+            font-family: 'Bebas Neue';
             display: block;
             width: 80%;
             height: 50px;
@@ -62,29 +61,12 @@
             width: 37.5%;
         }
         
+        #decimal{
+            width: 25%;
+        }
         
     </style>
-    <script>
-        //evento 
-        window.onload = function(){
-        let input = document.querySelector("display");
-        let digito = document.querySelectorAll("button");
-
-
-        function numero(event){
-            if (input.value == 0){
-                input.value = event.target.textContent;
-            }
-            else{
-                input.value = input.value + event.target.textContent;
-            }
-        }
-
-        for (let iterator of digito) {
-            iterator.addEventListener("click",numero);
-        }
-    }
-    </script>
+    <script src="minicalculadora.js"></script>
 </head>
 <body>
     
@@ -99,22 +81,28 @@
             <button class="aritmetica">-</button>
             <button class="aritmetica">X</button>
             <button class="aritmetica">/</button>
+
             <button class="digito">7</button>
             <button class="digito">8</button>
             <button class="digito">9</button>
             
+            <button id="borrar">borrar</button>
+
             <button class="digito">4</button>
             <button class="digito">5</button>
             <button class="digito">6</button>
             
-            
+            <button class="parentesis">(</button>
             
             <button class="digito">1</button>
             <button class="digito">2</button>
             <button class="digito">3</button>
             
+            <button class="parentesis">)</button>
+            
             <button class="digito grande">0</button>
             <button class="igual grande">=</button>
+            <button id="decimal">,</button>
             
         </section>
     </section>
