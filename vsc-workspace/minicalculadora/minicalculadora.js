@@ -4,13 +4,14 @@ window.onload = function(){
     var op1 = 0;
     var op2 = 0;
     var operando = "";
-
+    var sustituto = "";
 
     let input = document.querySelector("input");
     let digito = document.querySelectorAll(".digito");
-    let aritmetica =document.querySelectorAll(".aritmetica");
+    let aritmetica = document.querySelectorAll(".aritmetica");
     let igual = document.querySelector(".igual");
     let borrar = document.querySelector("#borrar");
+    let deci = document.querySelector("#decimal");
 
     for (let iterator of digito) {
         iterator.addEventListener("click",numero);
@@ -21,15 +22,21 @@ window.onload = function(){
         iterator.addEventListener("click",operacion);
     
     }
-
+    deci.addEventListener("click",decimal);
     igual.addEventListener("click",resolver);
 
     borrar.addEventListener("click",borrado);
     
     function decimal(event){
-        if (input.value!=0){
-            input.value+=event.target.textContent;
+        if (input.value.includes(",")){
+            deci.removeEventListener;
         }
+        else{
+            if (input.value!=0){
+                input.value+=event.target.textContent;
+            }
+        }
+        
     }
     function borrado(event){
         input.value="";
@@ -38,7 +45,9 @@ window.onload = function(){
     }
     function resolver(event){
         if (op1!=0){
-            op2 = parseFloat(input.value);
+            sustituto = input.value;
+            op2 = parseFloat(sustituto.replace(",","."));
+            sustituto = 0;
             resultado = `${op1} ${operando} ${op2}`;
             input.value = String(eval(resultado));
         }
@@ -51,7 +60,9 @@ window.onload = function(){
         else{
             operando = event.target.textContent;
         }
-        op1 = parseFloat(input.value);
+        sustituto = input.value;
+        op1 = parseFloat(sustituto.replace(",","."));
+        sustituto = 0;
         input.value="";
     }
 
