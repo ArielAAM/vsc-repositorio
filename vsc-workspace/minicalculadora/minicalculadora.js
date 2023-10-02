@@ -2,7 +2,7 @@
 window.onload = function(){
     var resultado = "";
     var op1 = 0;
-    var op2;
+    var op2 = 0;
     var operando = "";
 
 
@@ -10,11 +10,13 @@ window.onload = function(){
     let digito = document.querySelectorAll(".digito");
     let aritmetica =document.querySelectorAll(".aritmetica");
     let igual = document.querySelector(".igual");
+    let borrar = document.querySelector("#borrar");
 
     for (let iterator of digito) {
         iterator.addEventListener("click",numero);
         
     }
+
     for (let iterator of aritmetica){
         iterator.addEventListener("click",operacion);
     
@@ -22,10 +24,22 @@ window.onload = function(){
 
     igual.addEventListener("click",resolver);
 
+    borrar.addEventListener("click",borrado);
+    
+    function decimal(event){
+        if (input.value!=0){
+            input.value+=event.target.textContent;
+        }
+    }
+    function borrado(event){
+        input.value="";
+        op1 = 0;
+        operando = "";
+    }
     function resolver(event){
         if (op1!=0){
             op2 = parseFloat(input.value);
-            resultado = '${op1} ${operando} ${op2}';
+            resultado = `${op1} ${operando} ${op2}`;
             input.value = String(eval(resultado));
         }
     }
