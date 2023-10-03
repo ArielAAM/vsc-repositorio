@@ -44,24 +44,35 @@
             text-align: right;
             font-size: 30px;
         }
-        .botones{
-            width: 70%;
-            margin: 30px auto;
-        }
-        .aritmetica{margin-bottom: 10px;width: 25%;}
         button{
+            background-color:whitesmoke;
+            transition: background-color .5s linear;
             width: 25%;
             height: 40px;
             float: left;
             
         }
+        .botones{
+            width: 70%;
+            margin: 30px auto;
+        }
+        .aritmetica{margin-bottom: 10px;width: 25%;}
         
+        button:hover{
+            background-color:cornflowerblue;
+        }
         .grande{
             display: inline;
             width: 37.5%;
         }
         
         #raiz, #potencia, #decimal, #borrar{position: relative;left: 10px;}
+
+        
+        #borrar{transition: background-color .7s linear;}
+        #borrar:hover{
+            background-color: crimson;
+        }
     </style>
     <script src="minicalculadora.js"></script>
 </head>

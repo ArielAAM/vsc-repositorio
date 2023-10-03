@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: #e9d5da;
+}
+header{
+    background-image: url("../imagenes/header.jpg");
+    background-size: cover;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+header > p{
+    font-size: 30px;
+}
+
+section > h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+article{
+    border: solid 3px;
+    margin: 20px;
+    padding: 10px;
+}
+#noticiaDia  > h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+sub {
+   text-align: center;
+}
