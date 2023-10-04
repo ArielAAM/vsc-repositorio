@@ -30,7 +30,7 @@
         .calculadora{
             background-color:cadetblue;
             width: 800px;
-            height: 400px;
+            height: 450px;
             margin: 100px auto;
             padding: 30px 0 ;
             border: solid 2px;
@@ -66,8 +66,12 @@
             width: 37.5%;
         }
         
-        #raiz, #potencia, #decimal, #borrar{position: relative;left: 10px;}
-
+        .unitario{
+            margin-top: 10px;
+        }
+        
+        #raiz, #potencia, #decimal, #borrar, #pi{position: relative;left: 10px;margin: 0;}
+        #pi{margin-top: 10px;}
         
         #borrar{transition: background-color .7s linear;}
         #borrar:hover{
@@ -90,6 +94,7 @@
             <button class="aritmetica">X</button>
             <button class="aritmetica">/</button>
 
+            
             <button class="digito">7</button>
             <button class="digito">8</button>
             <button class="digito">9</button>
@@ -100,17 +105,22 @@
             <button class="digito">5</button>
             <button class="digito">6</button>
             
-            <button id="raiz">√</button>
+            <button class="unitario" id="raiz">√</button>
             
             <button class="digito">1</button>
             <button class="digito">2</button>
             <button class="digito">3</button>
             
-            <button id="potencia">x<sup>n</sup></button>
+            <button class ="unitario" id="potencia">x2</button>
             
             <button class="digito grande">0</button>
             <button class="igual grande">=</button>
             <button id="decimal">,</button>
+
+            <button class="unitario">sen</button>
+            <button class="unitario">cos</button>
+            <button class="unitario">tang</button>
+            <button id="pi">pi</button>
             
         </section>
     </section>
