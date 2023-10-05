@@ -6,6 +6,7 @@
 body{
     background-color: #e9d5da;
 }
+
 header{
     background-image: url("../imagenes/header.jpg");
     background-size: cover;
@@ -24,10 +25,25 @@ section > h1 {
     padding: 20px;
 }
 
+section > h2{
+    font-size: 40px;
+    text-align: center;
+}
+
 article{
     border: solid 3px;
+    border-radius: 20px;
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
+}
+article > div{
+    
+    margin: 10px;
+    text-align: center;
+}
+article > h3{
+    text-align: center;
+    margin: 5px;
 }
 #noticiaDia  > h2 {
     font-size: 30px;
@@ -36,4 +52,33 @@ article{
 
 sub {
    text-align: center;
+}
+
+
+#ultimaHora{
+    width: 50%;   
+}
+
+#interes{
+    width: 50%;
+}
+
+a{  
+    font-size: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 25px;
+    background-position: 100%;
+}
+a[href$="docx"]{
+    background-image: url("../imagenes/docxSimbolo.png");
+}
+a[href$="pdf"]{
+    background-image: url("../imagenes/pdfSimbolo.png");
+}
+a[href$="zip"]{
+    background-image: url("../imagenes/zipSimbolo.png");
+}
+a[href$=".htm"]{
+    padding: 10px;
 }
