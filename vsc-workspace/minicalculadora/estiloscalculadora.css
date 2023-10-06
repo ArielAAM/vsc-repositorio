@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-Regular.ttf');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-size: 50px;
+    font-family:'Bebas Neue';
+    text-align: center;    
+}
+body{
+    
+    background-image: url("imgs/atardecer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.calculadora{
+    background-color:cadetblue;
+    width: 800px;
+    height: 450px;
+    margin: 100px auto;
+    padding: 30px 0 ;
+    border: solid 2px;
+}
+input{
+    font-family: 'Bebas Neue';
+    display: block;
+    width: 80%;
+    height: 50px;
+    margin: 15px auto;
+    text-align: right;
+    font-size: 30px;
+}
+button{
+    background-color:whitesmoke;
+    transition: background-color .5s linear;
+    width: 25%;
+    height: 40px;
+    float: left;
+    
+}
+.botones{
+    width: 70%;
+    margin: 30px auto;
+}
+.aritmetica{margin-bottom: 10px;width: 25%;}
+
+button:hover{
+    background-color:cornflowerblue;
+}
+.grande{
+    display: inline;
+    width: 37.5%;
+}
+
+.unitario{
+    margin-top: 10px;
+}
+
+#raiz, #potencia, #decimal, #borrar, #pi{position: relative;left: 10px;margin: 0;}
+#pi{margin-top: 10px;}
+
+#borrar{transition: background-color .7s linear;}
+#borrar:hover{
+    background-color: crimson;
+}
