@@ -6,7 +6,13 @@
 body{
     background-color: #e9d5da;
 }
+img{
+    height:90%; width:90%;
 
+}
+button{
+    border-radius: 5px;
+}
 header{
     background-image: url("../imagenes/header.jpg");
     background-size: cover;
@@ -14,15 +20,38 @@ header{
     text-align: center;
     padding-top: 15px;
     padding-bottom: 10px;
+    min-width: 800px;
+    
 }
 header > p{
     font-size: 30px;
 }
-
-section > h1 {
-    font-size: 50px;
+nav{
+    background-color:bisque;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    min-width: 800px;
+}
+nav > ul {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0 auto;
+}
+nav > ul > li{
+    display: table-cell;
     text-align: center;
-    padding: 20px;
+    vertical-align: middle;
+}
+nav > ul > li a{display: block;}
+nav > ul > li a:hover{
+    background-color: burlywood;
+}
+section{min-width: 800px;}
+section > h1 {
+    font-size: 80px;
+    text-align: center;
+    padding:  20px;
 }
 
 section > h2{
@@ -50,25 +79,29 @@ article > h3{
     text-align: center;
 }
 
-sub {
-   text-align: center;
-}
-
-
 #ultimaHora{
-    width: 50%;   
+    width: 50%;  
+    display: table;
 }
 
 #interes{
     width: 50%;
+    display: table;
 }
 
+#ultimaHora >, #interes{
+    display: table-cell;
+}
+section > #ultimaHora, section > #interes{
+    display: table-cell;
+}
 a{  
     font-size: 20px;
     background-size: contain;
     background-repeat: no-repeat;
     padding-right: 25px;
     background-position: 100%;
+    text-decoration: none;
 }
 a[href$="docx"]{
     background-image: url("../imagenes/docxSimbolo.png");
@@ -81,4 +114,21 @@ a[href$="zip"]{
 }
 a[href$=".htm"]{
     padding: 10px;
+}
+footer{min-width: 800px;}
+footer > p {
+    margin: 10px;
+    text-align: center;
+}
+footer > ul{
+    text-align: center;
+}
+ul > li {
+    display: inline;
+    margin: 20px;
+}
+@media  screen and (max-width: 750px) {
+    section > #ultimaHora, section > #interes{
+        display: table-row;
+    }
 }
