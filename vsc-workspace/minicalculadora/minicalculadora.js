@@ -31,7 +31,7 @@ window.onload = function(){
     }
 
     //bucle for-of para añadir un evento a cada boton con los operadores unitarios
-    for (let iterator of unitario){
+    for (let iterator of unitario) {
         iterator.addEventListener("click",resolverUnitario);//se usa la funcion "resolverUnitario" para el evento "click"
     }
 
