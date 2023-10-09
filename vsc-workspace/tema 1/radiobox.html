@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <script>
+        window.onload = function() {
+            let preguntas = document.querySelectorAll("#pregunta input[type=radio]");
+            let p = document.querySelectorAll("p");
+            document.querySelector("h1").addEventListener("click", revision);
+            function revision() {
+                for (let pregunta of preguntas){
+                    if (pregunta.checked){
+                        console.log(`la respuesta seleccionada es la ${pregunta.value}`);
+                        p.value = pregunta.value;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cuestionario</h1>
+
+    <div id="form">
+        <div id="pregunta">
+            <input  type="radio" name="pregunta" id="pregunta1" value="respuesta1">
+            <label for="pregunta1">Pregunta1</label>
+            <input  type="radio" name="pregunta" id="pregunta2" value="respuesta2">
+            <label for="pregunta2">Pregunta2</label>
+            <input  type="radio" name="pregunta" id="pregunta3" value="respuesta3">
+            <label for="pregunta3">Pregunta3</label>
+            <input  type="radio" name="pregunta" id="pregunta4" value="respuesta4">
+            <label for="pregunta4">Pregunta4</label>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
