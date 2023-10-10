@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+</head>
+<body>
+    <section class="examen">
+        <article class="pregunta1">
+            <div class="pregunta">
+                <h3>Pregunta 1: En esta situación, elije el selector más adecuado para poder aplicarle estilos al último parrafo:</h3>
+                <pre>
+                    &lt;article&gt;
+                        &lt;h1&gt;bombardeo a israel&lt;/h1&gt;
+                            &lt;p&gt;El dia de ayer el grupo paramilitar palestino "hamas" lanzo un ataque masificado a distintas ciudades de israel&lt;/p&gt;
+                            &lt;p&gt;Se calcula que han muerto un total de 6000 civiles&lt;/p&gt;
+                            &lt;p&gt;El primer ministro de israel ya ha declarado que se lanzara un ataque total a las 600000 personas que viven en la franja de gaza&lt;/p&gt;
+                    &lt;/article&gt;
+                </pre>
+            </div>
+            <div class="respuesta">
+                <input type="radio" name="respuesta" value="true" id="respuesta1">
+                <label for="respuesta1">article:last-child{}</label> 
+                <input type="radio" name="respuesta" value="false" id="resuesta2">
+                <label for="respuesta2">article p{}</label>
+                <input type="radio" name="respuesta" value="false" id="respuesta3">
+                <label for="respuesta3">article > p {}</label>
+                <input type="radio" name="respuesta" value="false" id="respuesta4">
+            </div>
+        </article>
+    </section>
+</body>
+</html>
