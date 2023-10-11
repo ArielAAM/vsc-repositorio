@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuestionario</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
+    <header>
+        <h1>EXAMEN SOBRE DESARROLLO WEB</h1>
+    </header>
     <section class="examen">
+        
         <article class="pregunta1">
             <div class="pregunta">
                 <h3>Pregunta 1: En esta situación, elije el selector más adecuado para poder aplicarle estilos al último parrafo:</h3>
@@ -21,14 +26,58 @@
                 </pre>
             </div>
             <div class="respuesta">
-                <input type="radio" name="respuesta" value="true" id="respuesta1">
-                <label for="respuesta1">article:last-child{}</label> 
-                <input type="radio" name="respuesta" value="false" id="resuesta2">
-                <label for="respuesta2">article p{}</label>
-                <input type="radio" name="respuesta" value="false" id="respuesta3">
-                <label for="respuesta3">article > p {}</label>
-                <input type="radio" name="respuesta" value="false" id="respuesta4">
+                <input type="radio" name="respuesta" value="true" id="respuesta1.1">
+                <label for="respuesta1.1">article:last-child{}</label> 
+                <input type="radio" name="respuesta" value="false" id="respuesta1.2">
+                <label for="respuesta1.2">article p{}</label>
+                <input type="radio" name="respuesta" value="false" id="respuesta1.3">
+                <label for="respuesta1.3">article > p {}</label>
+                <input type="radio" name="respuesta" value="false" id="respuesta1.4">
+                <label for="respuesta1.4">article + p {}</label>
             </div>
+        </article>
+        <article class="pregunta2">
+            <div class="pregunta">
+                <h3>Pregunta 2: para poder modificar la primera linea de un parrafo, ¿qué selector hay que usar?</h3>
+            </div>
+            <div class="respuesta">
+                <input type="radio" name="respuesta" value="false" id="respuesta2.1">
+                <label for="respuesta2.1">p:first-child {}</label>
+                <input type="radio" name="respuesta" value="true" id="respuesta2.2">
+                <label for="respuesta2.2">p::first-line {}</label>
+                <input type="radio" name="respuesta" value="false" id="respuesta2.3">
+                <label for="respuesta2.3"> p {}</label>
+                <input type="radio" name="respuesta" value="dalse" id="respuesta2.4">
+                <label for="respuesta2.4">p::first-letter {}</label>
+            </div>
+        </article>
+        <article class="pregunta3">
+            <div class="pregunta">
+                <h3>Pregunta 3: Di que esta mal en este codigo</h3>    
+                <pre>
+                    &lt;article&gt;
+                        &lt;h1&gt;Hola mundo&lt;/h1&gt;
+                            &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium necessitatibus consequatur accusamus laudantium quo, 
+                            dolores doloribus culpa quasi autem reprehenderit perspiciatis nulla beatae neque itaque illum, rerum, explicabo veritatis modi?&lt;/p&gt;    
+                    &lt;/section&gt;
+                </pre>   
+            </div>
+            <div class="respuesta">
+                <input type="radio" name="respuesta" id="respuesta3.1" value="false">
+                <label for="respuesta3.1">la etiqueta p no esta cerrada</label>
+                <input type="radio" name="respuesta" id="respuesta3.2" value="false">
+                <label for="respuesta3.2">es necesario introducir una etiqueta span para que funcione el codigo</label>
+                <input type="radio" name="respuesta" id="respuesta3.3" value="false">                
+                <label for="respuesta3.3">la etiqueta de cerrado del article no coincide</label>
+                <input type="radio" name="respuesta" id="respuesta3.4" value="true">
+                <label for="respuesta3.4">hay que envolverlo en una etiqueta padre para que funcione</label>
+            </div>
+        </article>
+        <article class="pregunta4">
+
+        </article>
+        <article class="pregunta5">
+            
         </article>
     </section>
 </body>
