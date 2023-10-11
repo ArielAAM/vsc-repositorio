@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let seleccionElemento = document.querySelector("#seleccion");
+            seleccionElemento.addEventListener("change", function(){
+                let seleccion = seleccionElemento.options[seleccionElemento.selectedIndex];
+                console.log(`has seleccionado el deporte ${seleccion.textContent}, que tiene el codigo ${seleccionElemento.value}`);
+            })
+
+            let elementosCheckeados = document.querySelectorAll("input[name='historia']");
+            document.querySelector(".check").addEventListener("click",comprobar);
+            function comprobar(){
+                let seleccionado = [];
+                for (let elemento of elementosCheckeados){
+                    if (elemento.checked) seleccionado.push(elemento.value);
+                }
+                console.log(seleccionado);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="color" name="color" id="tal">
+    <hr>
+    <input type="date" name="date" id="cual">
+    <hr>
+    <select id="seleccion">
+        <option value=""></option>
+        <option value="1234">futbol</option>
+        <option value="4321">baloncesto</option>
+    </select>
+    <hr>
+    <input list="paises">
+    <datalist id="paises">
+        <option value="españa">
+        <option value="alemania">
+        <option value="francia">
+    </datalist>
+    <hr>
+    <h2>Casillas checkbox</h2>
+    <input type="checkbox" name="historia" id="opcion1" value="imperio romano">
+    <label for="opcion1">imperio romano</label>
+    <input type="checkbox" name="historia" id="opcion2" value="imperio español">
+    <label for="opcion2"> imperio español</label>
+    <input type="checkbox" name="historia" id="opcion3" value="imperio mongol">
+    <label for="opcion3">imperio mongol</label>
+    <input type="checkbox" name="historia" id="opcion4" value="imperio austrohungaro">
+    <label for="opcion4">imperio austrohungaro</label>
+    <button class="check">comprobar</button>
+</body>
+</html>
