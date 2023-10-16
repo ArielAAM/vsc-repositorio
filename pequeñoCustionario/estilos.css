@@ -5,21 +5,34 @@
 }
 body{
     background-color:bisque;
+    
+    min-width: 800px;
 }
+
 h1{
     text-align: center;
     margin: 30px;
     font-size: 90px;
 
 }
-
 .pregunta{
     background-color:tomato;
     color: white;
     width: 80%;
     margin: 0 auto;    
-    border: transparent  5px;
-    border-radius: 20px;}
+    border: solid  5px;
+    border-radius: 20px;
+}
+.pregunta img {
+    height: 20%;
+    width: 20%;
+    border: solid 3px black;
+    border-radius: 20px;
+}
+.pregunta div {
+    margin: 25px;
+    text-align: center;
+}
 .pregunta h3{
     font-size: 40px;
     line-height: 50px;
@@ -30,6 +43,9 @@ h1{
     margin: 10px auto;
 }
 .respuesta input[type=radio]{
+    display: none;
+}
+.respuesta input[type=checkbox]{
     display: none;
 }
 .respuesta label{
@@ -45,5 +61,27 @@ h1{
     line-height: 40px;
 }
 label:hover{
-    background-color:chocolate;
+    background-color:#bd4c42;
+}
+
+.validar{
+    display: block;
+    text-align: center;
+}
+.validar button{
+    margin: 30px;
+    width: 70%;
+    font-size: 50px;
+    border-radius: 10px;
+    background-color:darksalmon;
+}
+.validar button:hover{
+    background-color: #bd4c42;
+}
+
+.respuesta input[type=radio]:checked+label{
+    background-color:#bd4c42; 
+}
+.respuesta input[type=checkbox]:checked+label{
+    background-color:#bd4c42; 
 }

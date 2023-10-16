@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuestionario</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script src="procesadorespuestas.js"></script>
 </head>
 <body>
     <header>
@@ -13,15 +14,17 @@
     </header>
     <section class="examen">
         
-        <article class="pregunta1">
+        <article>
             <div class="pregunta">
                 <h3>Pregunta 1: En esta situación, elije el selector más adecuado para poder aplicarle estilos al último parrafo:</h3>
                 <pre>
                     &lt;article&gt;
                         &lt;h1&gt;bombardeo a israel&lt;/h1&gt;
-                            &lt;p&gt;El dia de ayer el grupo paramilitar palestino "hamas" lanzo un ataque masificado a distintas ciudades de israel&lt;/p&gt;
+                            &lt;p&gt;El dia de ayer el grupo paramilitar palestino "hamas" lanzo
+                             un ataque masificado a distintas ciudades de israel&lt;/p&gt;
                             &lt;p&gt;Se calcula que han muerto un total de 6000 civiles&lt;/p&gt;
-                            &lt;p&gt;El primer ministro de israel ya ha declarado que se lanzara un ataque total a las 600000 personas que viven en la franja de gaza&lt;/p&gt;
+                            &lt;p&gt;El primer ministro de israel ya ha declarado que se lanzara un 
+                            ataque total a las 600000 personas que viven en la franja de gaza&lt;/p&gt;
                     &lt;/article&gt;
                 </pre>
             </div>
@@ -36,7 +39,7 @@
                 <label for="respuesta1.4">article + p {}</label>
             </div>
         </article>
-        <article class="pregunta2">
+        <article>
             <div class="pregunta">
                 <h3>Pregunta 2: para poder modificar la primera linea de un parrafo, ¿qué selector hay que usar?</h3>
             </div>
@@ -51,14 +54,16 @@
                 <label for="respuesta2.4">p::first-letter {}</label>
             </div>
         </article>
-        <article class="pregunta3">
+        <article>
             <div class="pregunta">
                 <h3>Pregunta 3: Di que esta mal en este codigo</h3>    
                 <pre>
                     &lt;article&gt;
                         &lt;h1&gt;Hola mundo&lt;/h1&gt;
-                            &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium necessitatibus consequatur accusamus laudantium quo, 
-                            dolores doloribus culpa quasi autem reprehenderit perspiciatis nulla beatae neque itaque illum, rerum, explicabo veritatis modi?&lt;/p&gt;    
+                            &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Accusantium necessitatibus consequatur accusamus laudantium quo, 
+                            dolores doloribus culpa quasi autem reprehenderit perspiciatis 
+                            nulla beatae neque itaque illum, rerum, explicabo veritatis modi?&lt;/p&gt;    
                     &lt;/section&gt;
                 </pre>   
             </div>
@@ -73,12 +78,43 @@
                 <label for="respuesta3.4">hay que envolverlo en una etiqueta padre para que funcione</label>
             </div>
         </article>
-        <article class="pregunta4">
+        <article>
+            <div class="pregunta">
+                <h3>Pregunta 4: Para hacer una lista de selecciones, ¿cuál tipo de input es mejor?</h3>
+            </div>
+            <div class="respuesta">
+                <input type="checkbox" name="respuesta" id="respuesta4.1" value="true">
+                <label for="respuesta4.1">select</label>
+                <input type="checkbox" name="respuesta" id="respuesta4.2" value="true">
+                <label for="respuesta4.2">datalist</label>
+                <input type="checkbox" name="respuesta" id="respuesta4.3" value="false">
+                <label for="respuesta4.3">password</label>
+                <input type="checkbox" name="respuesta" id="respuesta4.4" value="true">
+                <label for="respuesta4.4">La primera y la segunda opcion son correctas</label>
+            </div>
+        </article>
+        <article>
+            <div class="pregunta">
+                <h3>Pregunta 5: ¿Quién es el autor de esta obra de arte?</h3>
+                <div>
+                    <img src="Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg" alt="el hombre sobre un mar de nubes">
+                </div>  
+            </div>
+            <div class="respuesta">
+                <input type="radio" name="respuesta" id="respuesta5.1" value="false">
+                <label for="respuesta5.1">Leonardo Da Vinci</label>
+                <input type="radio" name="respuesta" id="respuesta5.2" value="false">
+                <label for="respuesta5.2">Diego Velazquez</label>
+                <input type="radio" name="respuesta" id="respuesta5.3" value="true">
+                <label for="respuesta5.3">Caspar David Friedrich</label>
+                <input type="radio" name="respuesta" id="respuesta5.4" value="false">
+                <label for="respuesta5.4">Pablo Picasso</label>
+            </div>
+        </article>
 
-        </article>
-        <article class="pregunta5">
-            
-        </article>
+        <div class="validar">
+            <button>validar</button>
+        </div>
     </section>
 </body>
 </html>
