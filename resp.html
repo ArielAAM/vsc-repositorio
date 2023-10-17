@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 16px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .examen {
+            background: #ccc;
+            background-color: lightsalmon;
+            margin: 50px auto;
+            height: 400px;
+            width: 600px;
+        }
+
+        .pregunta h3 {
+            border-bottom: 2px solid white;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 35px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .pregunta pre {
+            color: white;
+            margin-left: -150px;
+        }
+
+        .respuestas {
+            background-color: #FAFAFA;
+            margin: 5px auto;
+            padding: 30px;
+            width: 100%;
+        }
+
+        .respuestas input[type="radio"] {
+            display: none;
+        }
+
+        .respuestas label {
+            background: #FAE3BB;
+            color: #4c3000;
+            cursor: pointer;
+            display: block;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.5em;
+            margin: 8px auto;
+            padding: 8px;
+            width: 95%;
+
+        }
+
+        .respuestas label:hover {
+            background-color: #EBBB67;
+        }
+
+        .respuestas input [type="radio"]:checked+label {
+            background: #CB8306;
+            color: #FAFAFA;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            let respuestas = document.querySelectorAll(".respuestas input[type=radio]");
+            for (let respuesta of respuestas) {
+                respuesta.addEventListener("change", procesaRespuesta);
+            }
+            function procesaRespuesta1() {
+                console.log(document.querySelector(".respuestas input[type=radio]:checked").value) 
+            }
+            function procesaRespuesta() {
+                let respuesta = document.querySelector(".respuestas input[type=radio]:checked").value === "true";
+                let color = (respuesta) ? "green" : "red";
+                console.log(document.querySelector(".respuestas input[type=radio]:checked+label")) 
+                document.querySelector(".respuestas input[type=radio]:checked+label").style.backgroundColor=color
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="examen">
+        <div class="pregunta">
+            <h3>Considerando el siguiente código HTML, Qué selector CSS es correcto?</h3>
+            <pre>
+                    &lt;nav class="menu1"&gt;
+                        &lt;ul&gt;
+                            &Lt;li&gt;&lt;a href=""&gt;Productos&lt;/a&gt; &lt;/li&gt;
+                            &Lt;li&gt;&lt;a href=""&gt;Ofertas&lt;/a&gt; &lt;/li&gt;
+                            &Lt;li&gt;&lt;a href=""&gt;Socios&lt;/a&gt; &lt;/li&gt;
+                            &Lt;li&gt;&lt;a href=""&gt;Contactos&lt;/a&gt; &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+            </pre>
+        </div>
+        <div class="respuestas">
+            <input type="radio" name="pregunta" value="true" id="pregunta1" >
+            <label for="pregunta1">.menu1 .li{ }</label>
+            <input type="radio" name="pregunta" value="false" id="pregunta2">
+            <label for="pregunta2">.nav a:hover{ }</label>
+            <input type="radio" name="pregunta" value="false" id="pregunta3">
+            <label for="pregunta3">a:hover{ }</label>
+            <input type="radio" name="pregunta" value="false" id="pregunta4">
+            <label for="pregunta4">ul nav li{ }</label>
+        </div>
+    </div>
+</body>
+
+</html>
