@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script>
+        window.onload = function() {
+            let form = document.forms.formulario;
+            let campos = form.elements.aficiones;
+            let boton = document.querySelector("button");
+            let inputs = campos.elements;
+            let parrafo = document.querySelector("p");
+            boton.addEventListener("click",proceso);
+            function proceso() {
+                for (let input of inputs) {
+                    
+                    console.log(input.value);
+                    parrafo.textContent += input.value + " ";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="formulario" id="formulario" method="get" action="">
+        <fieldset name="aficiones">
+            <label for="deportes">Escribe tu deporte favorito:</label>
+            <input type="text" name="deportes" id="deportes">
+            <label for="peliculas">Escribe tu pelicula favorita:</label>
+            <input type="text" name="peliculas" id="peliculas">
+            <label for="series">Escribe tu serie favorita:</label>
+            <input type="text" name="series" id="series">
+        </fieldset>
+        <button type="submit">enviar</button>
+    </form>
+
+    <p>resultado: </p>
+</body>
+</html>
