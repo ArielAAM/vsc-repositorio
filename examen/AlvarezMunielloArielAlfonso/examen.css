@@ -1,0 +1,89 @@
+/* Reseteamos tanto los margenes como los paddings de la pagina */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Establecemos un color de fondo para el body */
+body{
+    background-color:#f3aacb;
+}
+/* Para la imagen, como esta dentro del header, usamos un selector. 
+Establecemos tanto su ancho (100%), como su alto (250px), y su border inferior */
+header > img {
+    width: 100%;
+    height: 250px;
+    border-bottom: solid 20px #1e91ed;
+}
+/* En la barra de navegacion, actualizamos su display a tabla y le damos un layout fixed para que asigne el mismo espacio a cada elemento */
+nav {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    background-color:#9ddbc9;
+    margin-top: -4px;
+}
+p{
+    display: inline;
+    margin-right: 30px;
+    
+    font-size: 20px;
+}
+
+
+/* Tanto para el ol como para el li hacemos que su display sea de elementos de una tabla (table-row y table-cell respectivamente) */
+nav > ol {
+    display: table-row;
+    
+}
+nav > ol > li {
+    display: table-cell;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding:30px;
+}
+li:hover{
+    background-color: #15ab92;
+    
+}
+/* Como estamos usando la etiqueta a tambien, tenemos que actualizar su display para que podamos seleccionar en cualquier sitio dentro del espacio asignado */
+li > a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+/* 
+La clase form va a ser donde se va a ubicar todo lo demas de la pagina, usamos reglas generales para centrar el contenido y establecerle un ancho determinado */
+.form {
+    width: 70%;
+    margin: 0 auto;
+    min-width: 1000px;
+}
+/* 
+Estilizamos todo el contenido dentro de la clase form  */
+.form > article {
+    text-align: center;
+    margin: 60px auto;
+    padding: 50px;
+    border: solid 3px #ab4bde;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+article > input[type="checkbox"] {
+    margin-right: -40px;
+}
+article > label{
+    margin: 40px;
+}
+button {
+    font-size: 30px;
+    width: 30%;
+    border-radius: 20px;
+    background-color: #ab4bde;
+}
+button:hover{
+    background-color: #15ab92;
+}

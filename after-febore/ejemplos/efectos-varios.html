@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos ::after y ::before</title>
+</head>
+<style>
+    p::before {
+        content: "Antes: ";
+        color: #007bff;
+        font-size: 22px;
+    }
+
+    a.externo::before {
+        content: "\2197";
+        padding-right: 10px;
+        color: yellowgreen;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .importante::before {
+        content: "⚠ ";
+        color: red;
+        font-size: 2em;
+    }
+
+    ul.lista-personalizada {
+        list-style: none;
+    }
+
+    ul.lista-personalizada li::before {
+        content: "▶";
+        color: orangered;
+        padding-right: 10px;
+        line-height: 1.8em;
+    }
+
+    blockquote::before {
+        content: "❝";
+        font-size: 24px;
+        padding: 10px;
+        color: orange;
+    }
+
+
+    blockquote::after {
+        content: "❞";
+        font-size: 24px;
+        margin-left: 10px;
+        color: orange;
+    }
+
+    blockquote {
+        line-height: 24px;
+    }
+
+    .nav-bar::before {
+        content: "";
+        display: block;
+        height: 4px;
+        background-color: #007bff;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minima, dolorem eum facere debitis esse optio
+        rem voluptas, placeat mollitia inventore consequatur corporis doloremque illum expedita voluptatibus sequi ullam
+        iusto eveniet! Autem vel commodi, alias repudiandae minima ipsam nobis deserunt repellendus facere quas quidem,
+        sit ea magni quam ab blanditiis.</p>
+    <hr>
+    <a class="externo" href="http://www,cifplalaboral.es">Web del centro</a>
+    <br>
+    <a href="#">Enlace interno</a>
+    <hr>
+    <div class="importante">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perspiciatis rem
+        voluptatibus, eligendi id sunt incidunt nulla soluta quasi rerum vitae culpa. Pariatur explicabo deserunt rem
+        iste necessitatibus porro tempore ipsam at facilis voluptate doloribus molestias, repudiandae facere odio ea
+        reprehenderit dolore laboriosam ut in beatae, itaque aliquam esse. Harum.</div>
+    <hr>
+    <ul class="lista-personalizada">
+        <li>Elemento 01</li>
+        <li>Elemento 02</li>
+        <li>Elemento 03</li>
+        <li>Elemento 04</li>
+    </ul>
+    <hr>
+    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur totam similique omnis sequi nemo
+        ullam beatae voluptas debitis nam sunt dolorem, ducimus deserunt rerum nulla maiores voluptatibus accusamus
+        repudiandae tempore, nobis, voluptatum iure? Voluptatum amet eligendi iusto quis temporibus facere, adipisci
+        numquam obcaecati voluptate vero, odit deleniti quidem, distinctio sit.</blockquote>
+</body>
+
+</html>

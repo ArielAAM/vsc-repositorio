@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Ordenada Personalizada</title>
+    <style>
+        /* Estilos personalizados para la lista ol */
+        ol {
+            list-style: none;
+            /* Oculta los marcadores de lista predeterminados */
+            counter-reset: my-counter;
+            /* Reinicia el contador personalizado */
+
+        }
+
+        /* Estilos para los elementos de la lista */
+        ol li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        /* Pseudoelemento ::before para agregar números personalizados */
+        ol li::before {
+            content: counter(my-counter);
+            /* Usa el valor actual del contador personalizado */
+            counter-increment: my-counter;
+            /* Incrementa el contador */
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>Primer elemento de la lista</li>
+        <li>Segundo elemento de la lista</li>
+        <li>Tercer elemento de la lista</li>
+        <li>Cuarto elemento de la lista</li>
+    </ol>
+</body>
+
+</html>

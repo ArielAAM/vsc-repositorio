@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación Deslizante</title>
+    <style>
+        nav {
+            display: table;
+            table-layout: fixed;
+            border-spacing: 10px;
+            width: 60%;
+            margin: 30px auto;
+        }
+
+        .nav-bar {
+            position: relative;
+            display: table-cell;
+            text-decoration: none;
+            color: #333;
+            line-height: 50px;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        .nav-bar::before {
+            content: "";
+            display: block;
+            height: 4px;
+            background-color: #007bff;
+            width: 100%;
+        }
+
+        .nav-bar::after {
+            content: "";
+            display: block;
+            height: 4px;
+            background-color: #007bff;
+            width: 0;
+            transition: width .3s ease;
+        }
+
+        .nav-bar:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="nav-bar">Sobre nosotros</a>
+        <a href="#" class="nav-bar">Ofertas de la semana</a>
+        <a href="#" class="nav-bar">Tienda online</a>
+        <a href="#" class="nav-bar">Contacta con nosotros</a>
+    </nav>
+</body>
+
+</html>
