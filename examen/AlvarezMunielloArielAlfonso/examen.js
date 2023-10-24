@@ -4,6 +4,7 @@ window.onload = function() {
     let botonCrear = document.querySelector("#crear");
     let botonInforme = document.querySelector("#informe");
     let objetos = document.querySelector("#objetos");
+    let informar = document.querySelector("#informar");
     botonCrear.addEventListener("click",crearObjetos);
     botonInforme.addEventListener("click",informe);
 
@@ -14,46 +15,41 @@ window.onload = function() {
 
                 //estructura condicional para crear los elementos
                 if (check.id === "NombreApellidos") {
-                    objetos.innerHTML += `<p>Nombre y Apellidos: </p> <input type="text" name="nombre" class="objeto"><br>`;
+                    objetos.innerHTML += `<p>Nombre y Apellidos: </p> <input type="text" name="nombre" id="nombredato" class="dato"><br>`;
                 }
 
                 else if (check.id === "FechaNac") {
-                    objetos.innerHTML += `<p>Fecha de nacimiento: </p> <input type="date" name="fechaNacimiento" class="objeto"><br>`;
+                    objetos.innerHTML += `<p>Fecha de nacimiento: </p> <input type="date" id="fechadato" name="fechaNacimiento" class="dato"><br>`;
                 }
 
                 else if (check.id === "Direccion") {
-                    objetos.innerHTML += `<p>Direccion: </p> <input type="text" name="direccion" class="objeto"><br>`;
+                    objetos.innerHTML += `<p>Direccion: </p> <input type="text" id="direcciondato" name="direccion" class="dato"><br>`;
                 }
                 else if (check.id === "CodigoPostal") {
-                    objetos.innerHTML += `<p>Codigo Postal: </p> 
-                                        <select class=objetos>
-                                        <option value=""></option>
-                                        <option value=15>15</option>
-                                        <option value=27>27</option>
-                                        <option value=32>32</option>
-                                        <option value=33>33</option>
-                                        <option value=39>39</option>
-                                        </select>
-                                        <input type="number name="codigo" class="objeto"><br>`
+                    objetos.innerHTML += `<p>Codigo Postal: </p><input type="number" id="codigodato" name="codigo" class="dato"><br>`;
                 }
             }
         }
     }
     
-    let objects = document.querySelectorAll(".objeto");
 
     function informe() {
+        
+        let objects = document.querySelectorAll(".dato");
         let nombre;
         let fecha;
         let direccion;
         let codigo;
         for (let object of objects) {
-            if (objeto.tagName === "NOMBRE") {
-                let set = new Set();
-                set.add(objeto);
-                if (set.size > 45) {
-                    window.alert("numero de caracteres ha superado el maximo");
+            if (object.id == "nombredato") {
+                
+                if (object.length > 45) {
+                    informar.innerHTML += `<p>El numero de  caracteres ha alcanzado el maximo</p><br>`;
                 }
+                else{
+                    let nombre = object.value;
+                }
+                
             }
         }
     }
