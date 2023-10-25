@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de tareas</title>
+    <script>
+        window.onload = function() {
+            let input = document.querySelector("input");
+            let anadir = document.querySelector("button");
+            let listatarea = document.querySelector("ul");
+            let nums = "0123456789";
+            anadir.addEventListener("click",añadirTarea);
+            input.addEventListener("keydown", function(event) {
+                if (nums.includes(event.key)){
+                    event.preventDefault();
+                }
+                // console.log(event.key);
+                if (event.key === "Enter") {
+                    añadirTarea();
+                }
+            })
+            function añadirTarea(event) {
+                if (input.value.trim() !== ""){
+                    if (input.value.length < 50) {
+                        let objetolista = document.createElement('li');
+                        objetolista.textContent += input.value;
+                        listatarea.append(objetolista);
+                        input.value = "";
+                    }
+                    else {
+                        alert("Numero maximo de caracteres sobrepasado");
+                        input.value = "";
+                    }
+                }
+                else {
+                    alert("No hay datos que agregar");
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <input type="text" placeholder="new task">
+    <button>Añadir tarea</button>
+    <ul></ul>
+</body>
+</html>
