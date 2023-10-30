@@ -45,13 +45,14 @@ nav > ol > li {
 }
 li:hover{
     background-color: #15ab92;
+    cursor: pointer;
     
 }
 /* Como estamos usando la etiqueta a tambien, tenemos que actualizar su display para que podamos seleccionar en cualquier sitio dentro del espacio asignado */
 li > a {
     display: block;
     text-decoration: none;
-    cursor: pointer;
+    
     color: black;
 }
 /* 
