@@ -6,36 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex</title>
     <style>
-        .cont {
-            width: 90vw;
-            height: 90vh;
-            background-color: brown;
+        .flex-container {
+            /* We first create a flex layout context */
             display: flex;
+  
+            /* Then we define the flow direction 
+            and if we allow the items to wrap 
+            * Remember this is the same as:
+            * flex-direction: row;
+            * flex-wrap: wrap;
+            */
+            flex-flow: row wrap;
+  
+            /* Then we define how is distributed the remaining space */
             justify-content: space-evenly;
-            align-items: center;
-            align-content: space-around;
+            gap: 10px 10px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+    }
+
+        .flex-item {
             
-        }
-        .element {
-            width: 100px;
-            height: 100px;
-            background-color:aqua;
-        }
+            background: tomato;
+            width: 200px;
+            height: 150px;
+            flex: 1 20vw;
+            vertical-align: middle;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+    }
         
     </style>
 </head>
 <body>
-    <div class="cont">
-        <div class="element">01</div>
-        <div class="element">02</div>
-        <div class="element">03</div>
-        <div class="element">04</div>
-        <div class="element cinco">05</div>
-        <div class="element">06</div>
-        <div class="element">07</div>
-        <div class="element">08</div>
-        <div class="element">09</div>
-        <div class="element">10</div>
-    </div>
+    <ul class="flex-container">
+        <li class="flex-item">1</li>
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+        <li class="flex-item">6</li>
+      </ul>
 </body>
 </html>

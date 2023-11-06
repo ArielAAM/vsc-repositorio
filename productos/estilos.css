@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    font-size: 50px;
+}
+
+
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 60vw;
+    background-color: aquamarine;
+    font-size: 0.5em;
+    align-items: center;
+}
+
+.productos h1, .carrito h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 30px;
+}
+
+.carrito {
+    display: flex;
+    flex: 1 40vw;
+    background-color: cornflowerblue;
+}
+
+

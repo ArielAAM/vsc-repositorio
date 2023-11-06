@@ -9,29 +9,68 @@ window.onload = function() {
             imagen: "teclado.jpg",
             imgalt: "teclado ergonomico",
             desc: "teclado ergonomico para los mas mayores"
+        },
+        {
+            imagen: "micro.jpg",
+            imgalt: "microfono gamer",
+            desc: "microfono profesional que graba increible"
         }
     ]
+    
 
-    document.querySelector("button").addEventListener("click",consulta);
+
 
     function consulta() {
-        let sec = document.createElement('section');
+        let section = document.querySelector("section");
+
+        let sec = document.createElement('article');
+        sec.className="productos";
+
+        let sec2 = document.createElement('article');
+        sec2.className="carrito";
+
+        
+
+        let titulocarrito = document.createElement('h1');
+        titulocarrito.textContent="carrito";
+        sec2.append(titulocarrito);
+
+        let tituloproducto = document.createElement('h1');
+        tituloproducto.textContent="La cesta de la compra";
+        sec.append(tituloproducto);
 
         for (const prod of prods){
+            let titulo = document.createElement('h2');
+            titulo.textContent = `${prod.imgalt}`;
+            let division = document.createElement('div');
+            division.className="producto";
             
             let imagen = document.createElement('img');
             let descripcion = document.createElement('p');
+
+            let boton = document.createElement('button');
+            boton.textContent = "Añadir al carrito";
+
             imagen.src = `./imgs/${prod.imagen}`;
             imagen.width = '250';
             
             imagen.alt = prod.imgalt;
             descripcion.textContent = prod.desc;
 
-            sec.append(imagen);
-            sec.append(descripcion);
+            division.append(titulo);
+            division.append(imagen);
+            division.append(descripcion);
+            division.append(boton);
+            sec.append(division);
+
+            section.append(sec);
+            section.append(sec2);
         }
 
-        document.body.append(sec);
+        document.body.append(section);
+        
     }
 
+
+    consulta();
 }
