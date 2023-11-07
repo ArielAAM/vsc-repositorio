@@ -3,16 +3,19 @@ window.onload = function() {
         {
             imagen: "raton.jpg",
             imgalt: "raton gamer",
+            precio: "100.45$",
             desc: "raton hecho por gamer para gamers"
         },
         {
             imagen: "teclado.jpg",
             imgalt: "teclado ergonomico",
+            precio: "20$",
             desc: "teclado ergonomico para los mas mayores"
         },
         {
             imagen: "micro.jpg",
             imgalt: "microfono gamer",
+            precio: "75.75$",
             desc: "microfono profesional que graba increible"
         }
     ]
@@ -24,10 +27,10 @@ window.onload = function() {
         let section = document.querySelector("section");
 
         let sec = document.createElement('article');
-        sec.className="productos";
+        sec.classList.add("productos");
 
         let sec2 = document.createElement('article');
-        sec2.className="carrito";
+        sec2.classList.add("carrito");
 
         
 
@@ -43,7 +46,7 @@ window.onload = function() {
             let titulo = document.createElement('h2');
             titulo.textContent = `${prod.imgalt}`;
             let division = document.createElement('div');
-            division.className="producto";
+            division.classList.add("producto");
             
             let imagen = document.createElement('img');
             let descripcion = document.createElement('p');
@@ -57,9 +60,12 @@ window.onload = function() {
             imagen.alt = prod.imgalt;
             descripcion.textContent = prod.desc;
 
+            let precio = document.createElement('p');
+            precio.textContent = `Precio: ${prod.precio}`;
             division.append(titulo);
             division.append(imagen);
             division.append(descripcion);
+            division.append(precio);
             division.append(boton);
             sec.append(division);
 
