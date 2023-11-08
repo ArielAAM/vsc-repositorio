@@ -53,7 +53,7 @@ window.onload = function() {
 
             let boton = document.createElement('button');
             boton.textContent = "Añadir al carrito";
-
+            boton.classList.add("botonAñadir");
             imagen.src = `./imgs/${prod.imagen}`;
             imagen.width = '250';
             
@@ -75,8 +75,49 @@ window.onload = function() {
 
         document.body.append(section);
         
+        let botonAgregar = document.querySelectorAll(".botonAñadir");
+
+        for (boton of botonAgregar) {
+            boton.addEventListener("click", añadirCarrito);
+        }
+
+        function añadirCarrito(even) {
+            let producto = even.target;
+
+            let productocarrito = document.createElement('div');
+            productocarrito.classList.add("productoCarrito")
+            let imagenCarrito = document.createElement('img');
+            let title = document.createElement('h3');
+            title.textContent = `${producto.parentElement.firstElementChild.textContent}`;
+            productocarrito.append(title);
+
+            imagenCarrito.src = producto.parentElement.firstElementChild.nextElementSibling.src;
+            imagenCarrito.alt = producto.parentElement.firstElementChild.nextElementSibling.alt;
+            imagenCarrito.height = '100';
+
+            let detalles = document.createElement('div');
+            detalles.append(imagenCarrito);
+            detalles.classList.add("detallesCarrito");
+            detalles.append(document.createElement('p'));
+            detalles.firstElementChild.nextElementSibling.textContent = producto.parentElement.lastElementChild.previousElementSibling.textContent;
+            detalles.append(document.createElement('button'));
+            detalles.lastElementChild.textContent = "Borrar producto";
+            detalles.lastElementChild.classList.add("borrarProducto");
+            detalles.lastElementChild.addEventListener("click",borrar);
+            productocarrito.append(detalles);
+            sec2.append(productocarrito);
+        }
+
+        
+
+        function borrar(even) {
+            let elemento = even.target.parentNode.parentNode;
+            elemento.remove();
+        }
     }
 
 
     consulta();
+
+    
 }

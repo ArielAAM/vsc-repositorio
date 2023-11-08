@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    font-size: 50px;
+}
 section {
     display: flex;
-    font-size: 50px;
+    font-size: 1rem;
 }
 
 
@@ -17,7 +19,7 @@ section {
     flex-wrap: wrap;
     flex: 1 70vw;
     background-color: aquamarine;
-    font-size: 0.5em;
+    font-size: 2em;
     gap: 20px;
     
 }
@@ -36,7 +38,8 @@ section {
     padding: 10px;
     width: 40vw;
     min-width: 300px;
-    
+    margin: 20px;
+
 }
 
 .producto h2, .producto img, .producto p {
@@ -62,8 +65,46 @@ button {
 .carrito {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     flex: 1 30vw;
     background-color: cornflowerblue;
+    font-size: 2.5rem;
+    
 }
+
+
+.productoCarrito {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px; 
+    border: solid 5px;
+    background-color: white;
+    border-color: skyblue;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 5px 7px 1px #000000; 
+    box-shadow: 4px 5px 7px 1px #000000;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.productoCarrito h3 {
+    align-self: center;
+}
+
+.detallesCarrito {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.detallesCarrito button {
+    font-size: 1rem;
+    padding: 5px;
+    margin-right: 10px;
+}
+
 
 
