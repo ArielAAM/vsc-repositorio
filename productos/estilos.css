@@ -9,6 +9,9 @@ body{
 section {
     display: flex;
     font-size: 1rem;
+    
+    justify-content: space-around;
+    
 }
 
 
@@ -21,6 +24,8 @@ section {
     background-color: aquamarine;
     font-size: 2em;
     gap: 20px;
+    border-radius: 50px;
+    
     
 }
 
@@ -69,6 +74,7 @@ button {
     flex: 1 30vw;
     background-color: cornflowerblue;
     font-size: 2.5rem;
+    border-radius: 50px;
     
 }
 
