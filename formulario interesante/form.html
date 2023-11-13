@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario ejemplo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-section">
+        <h1 class="form-title">Play with the form!</h1>
+      <p>(Or read how this demo was made <a href="https://www.silocreativo.com/en/progressive-disclosure-with-css/" target="_blank">here</a>)</p>
+        <form id="form" class="form" autocomplete="off">
+                <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" autocomplete="nope" required>
+                <label for="name">Name</label>
+                <input id="surname" placeholder="Surname *" name="surname" type="text" value="" size="30" maxlength="245" autocomplete="nope" required>
+                <label for="surname">Surname</label>
+                <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="nope" required>
+                <label for="email">Email</label>
+                <textarea textarea="" placeholder="Comment *" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea>
+                <label for="comment" data-help="Escribe algo! Lo primero que se te ocurra">Comment</label>
+                <input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
+        </form>
+    </div>
+</body>
+</html>
