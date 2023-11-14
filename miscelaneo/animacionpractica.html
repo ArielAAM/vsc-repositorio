@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animaciones</title>
+    <style>
+        div { 
+            width: 100px;
+            height: 100px;
+            position:relative;
+            background-color: red;
+            animation-name: ejemplo1;
+            animation-duration: 8s;
+            animation-delay: -2s;
+            animation-iteration-count: infinite ;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        section {
+            background-color: #2ca32c;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+        }
+        h1 {
+            white-space: nowrap;
+            font-size: 90px;
+            text-align: center;
+            overflow: hidden;
+            animation: writer 2s steps(16) infinite alternate, blink 1s steps(16) infinite normal;
+            
+            border-right: solid 5px black;
+        }
+        @keyframes ejemplo1 {
+            0% {background-color: red; left:0px;top:0px;}
+            25% {background-color: blue; left:200px;top:0px}
+            50% {background-color: yellow; left: 200px;top:200px}
+            75% {background-color: black; left: 0px;top:200px}
+            100% {background-color: red; left:0px;top:0px;}
+
+        }
+
+        @keyframes writer {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 45%;
+            }
+        }
+
+        @keyframes blink {
+            from {border-color: black;}
+            to{border-color: transparent;}
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <section>
+        <h1>Hola Buenas Tardes</h1>
+    </section>
+</body>
+</html>
