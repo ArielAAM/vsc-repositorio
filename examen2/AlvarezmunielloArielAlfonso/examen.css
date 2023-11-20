@@ -1,0 +1,109 @@
+/* eliminamos los margenes impuestos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*establecemos un tamaño de fuente por defecto en la pagina*/
+body {
+    font-size: 50px;
+}
+/*para el titulo de la pagina, al estar fuera del flox de los flexbox le establecemos simplemente sus estilos propios*/
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    background-color: #f6a700;
+    color: white;
+    border-bottom: solid 10px black;
+}
+/*En la seccion principal lo establecemos como flexbox, le damos una direccion de fila y hacemos que se separen 20px con el gap*/
+.principal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #2196f3;
+    padding: 10px;
+
+}
+/*establecemos la seccion de los productos como flex tambien, le damos un ancho especifico y una direccion de columna, establecemos tambien un tamaño de fuente y la separacion interior entre elementos*/
+.productos {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 30px;
+    min-width: 1050px;
+}
+/*dentro de la seccion productos establecemos como flex cada articulo con producto tambien. Su direccion es de fila y su separacion es de 10px. Se establecen sombras para la caja tambien*/
+.producto {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: #664300;
+    padding: 10px;
+    color: white;
+    flex-grow: 1;
+    align-items: center;
+    
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.producto > img {
+    border-radius: 20px;
+}
+
+/*dentro de cada articulo tambien hay un contenedor destinado a los demas atributos del producto, donde se establecen tambien como flex y haciendo que su direccion sea de columna*/
+.detalles{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.detalles > h3 {
+    border-bottom: solid 3px;
+    
+}
+
+/*estilos para el contenedor de los botones centrandolos*/
+.botones {
+    display: flex;
+    gap: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.boton {
+    width: 200px;
+    height: 50px;
+    background-color: #2196f3;
+    border-radius: 10px;
+}
+.boton:hover {
+    background-color: #1465bb;
+}
+
+/*estilos para el contenedor de los grupos estableciendo su flex y la direccion en columna*/
+.grupos {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    gap: 40px;
+    min-width: 600px;
+}
+
+.grupos > article {
+    background-color: #b87400;
+    color: white;
+    
+}
+
+.grupos > article > h3 {
+    font-size: 3rem;
+    border-bottom: solid white 2px;
+    
+}
