@@ -1,5 +1,4 @@
-@import url(https://fonts.google.com/specimen/Kdam+Thmor+Pro);
-
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 :root {
 
     --fuente:'Kdam Thmor Pro';
@@ -32,6 +31,7 @@ html,body,ul,li,a,p,h3,span{
 body {
     width: 100vw;
     height: 100vh;
+    /* overflow: hidden; */
 }
 
 
@@ -42,6 +42,7 @@ body {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .informacion {
@@ -60,9 +61,7 @@ body {
     height: 100vh;
 }
 
-.celda:hover .informacion {
-    color: black;
-}
+
 
 .celda:hover .velo {
     top: 0;

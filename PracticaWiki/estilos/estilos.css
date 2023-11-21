@@ -7,7 +7,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 150px;
 }
 
 .header {
@@ -23,11 +23,15 @@
 .header .menu-velo {
     margin-right: 50px;
     margin-top: 100px;
+    padding-left:20px;
+    padding-right: 20px;
+    border-radius: 10px;
 }
 
 .header .logo {
     margin-left: 50px;
     margin-top: 100px;
+   
 }
 .pagina-principal {
     display: flex;
@@ -51,6 +55,79 @@
     margin-right: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    gap: 5px;
+    
 }
+
+.menu-principal > .celda .informacion {
+    padding: 10px;
+    
+}
+
+.menu-velo:hover {
+    background-color: var(--color2);
+    transition: background-color 1s ease;
+    cursor: pointer;
+    
+}
+
+@media screen and (320px <= width <= 768px) {
+    .pagina-principal {
+        flex-direction: column;
+    }
+
+    .menu-principal {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .frase {
+        margin-left: 10px;
+    }
+    .contenido {
+        gap: 40px;
+        font-size: var(--font-pequeño);
+    }
+
+    .header .logo, .header .menu-velo{
+        margin-top: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.principal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--color1);
+}
+
+.logo-secundario {
+    display:flex;
+    justify-content: center;
+    width: 100vw;
+    border-bottom: solid 10px var(--color4);
+    
+}
+
+.contenido-secundario {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalles {
+    display:flex;
+    flex-direction: row;
+}
+
 
