@@ -31,13 +31,12 @@ html,body,ul,li,a,p,h3,span{
 body {
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
 }
 
 
 
 
-.celda{
+.wik-celda{
     background-color: var(--color2);
     position: relative;
     cursor: pointer;
@@ -45,24 +44,25 @@ body {
     border-radius: 10px;
 }
 
-.informacion {
+.wik-informacion{
     text-align: center;
     position: relative;
     transition: color .8s ease;
+    padding: 10px;
 }
 
-.velo {
+.wik-velo{
     background-color: var(--color4);
     position: absolute;
     top: 100%;
     left: 0;
-    transition: top .5s ease-in;
+    transition: top .3s ease-in;
     width: 100vw;
     height: 100vh;
 }
 
 
 
-.celda:hover .velo {
+.wik-celda:hover .wik-velo {
     top: 0;
 }
