@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha para carrusel</title>
+    <style>
+        @import url("./comun.css");
+
+        .carrusel {
+            margin: 50px auto;
+            background-color: rgba(218, 218, 218, .3);
+            width: 730px;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+
+        .ficha-carrusel {
+            border: 1px solid rgba(205, 200, 200, 0.75);
+            width: 692px;
+            height: 280px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            position: absolute;
+            transform: translateX(-120%);
+            box-shadow: 8px 7px 5px -3px rgba(205, 200, 200, 0.75);
+            transition: transform 1s ease;
+        }
+
+        .imagen-carrusel img {
+            width: 290px;
+            height: 190px;
+            display: block;
+            box-shadow: 10px 7px 5px -3px rgba(205, 200, 200, .75);
+        }
+
+
+        .info-carrusel {
+            width: 290px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            row-gap: 15px;
+        }
+
+        .info-carrusel h3 {
+            color: var(--color-header);
+            font-family: var(--fuente-logo);
+            font-size: 2.3em;
+            border-bottom: 6px solid var(--color-hover);
+            padding-bottom: 5px;
+        }
+
+        .info-carrusel p {
+            font-family: var(--fuente-texto);
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const carousel = document.querySelector(".carousel");
+            const slides = document.querySelectorAll(".ficha-carrusel");
+
+            // Establecer el índice del slide actual
+            let index = 0;
+
+            // Mostrar el primer slide
+            slides[index].style.transform = "translateX(0)";
+
+            // Crear una función para cambiar el slide
+            function changeSlide() {
+                // Ocultar el slide actual
+                slides[index].style.zIndex = "0";
+                slides[index].style.transform = "translateX(-120%)";
+                // Incrementar o reiniciar el índice
+                index = (index + 1) % slides.length;
+                // Mostrar el nuevo slide
+                slides[index].style.zIndex = "1";
+                slides[index].style.transform = "translateX(0)";
+            }
+
+            // Crear una variable para almacenar el intervalo
+            let interval;
+
+            // Crear una función para iniciar el intervalo
+            function startInterval() {
+                // Establecer el intervalo en 3,5 segundos
+                interval = setInterval(changeSlide, 4000);
+            };
+            startInterval();
+        }
+    </script>
+</head>
+
+<body>
+    <section class="carrusel">
+        <article class="ficha-carrusel">
+            <div class="imagen-carrusel">
+                <img src="./imagenes/desayuno.jpg" alt="Desayunos">
+            </div>
+
+            <div class="info-carrusel">
+                <h3>Desayunos saludables</h3>
+                <p>Surtido variado de desayuno que incluye zumos, bollos artesanales, frutas de temporada, panes
+                    variados, mermeladas naturales y cafés</p>
+            </div>
+        </article>
+        <article class="ficha-carrusel">
+            <div class="imagen-carrusel">
+                <img src="./imagenes/embutidos.jpg" alt="Enbutidos">
+            </div>
+
+            <div class="info-carrusel">
+                <h3>Embutidos caseros</h3>
+                <p>Surtido de deliciosos embutidos delicatessen en tabla de madera</p>
+            </div>
+        </article>
+        <article class="ficha-carrusel">
+            <div class="imagen-carrusel">
+                <img src="./imagenes/lacteos.jpg" alt="Lacteos">
+            </div>
+
+            <div class="info-carrusel">
+                <h3>Productos lácteos</h3>
+                <p>La leche en mesa de madera con las vacas en el fondo</p>
+            </div>
+        </article>
+        <article class="ficha-carrusel">
+            <div class="imagen-carrusel">
+                <img src="./imagenes/quesos.jpg" alt="Quesos">
+            </div>
+
+            <div class="info-carrusel">
+                <h3>Surtidos de quesos</h3>
+                <p>Estilo tradicional de las tazas de queso artesanales</p>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>

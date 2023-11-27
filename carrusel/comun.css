@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Dancing+Script:wght@700&family=Inspiration&display=swap');
+:root {
+    --color-borde: #E13A29;
+    --color-hover: #E95626;
+    --color-header: #B22222;
+    --color-fondo: #FAF0E6;
+    --fuente-texto: 'Abel', sans-serif;
+    --fuente-logo: 'Dancing Script', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.logo {
+    cursor: pointer;
+    font-size: 48px;
+    width: 295px;
+    height: 50px;
+    position: relative;
+}
+
+.logo span {
+    color: white;
+    font-family: var(--fuente-logo);
+    font-size: 1em;
+}
+
+.logo span::after {
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: var(--color-borde);
+    position: absolute;
+    right: 5px;
+    bottom: -10px;
+}
