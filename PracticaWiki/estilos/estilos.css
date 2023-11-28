@@ -186,13 +186,15 @@ body {
 @media screen and (320px <= width <= 768px) {
     .pagina-principal {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
 
     .menu-principal {
         flex-direction: column;
         margin-left: 10px;
         margin-right: 10px;
+        flex-wrap: wrap;
+        height: 50vh;
     }
     a {
         font-size: var(--font-pequeno);
@@ -235,22 +237,6 @@ body {
         top: 0.5px;
     }
     
-/* 
-    @media screen and (370px <= height ) {
-    .menu-principal {
-        flex-direction: row;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .wik-celda {
-        width: 200px;
-        height: 100px;
-    }
-    .wik-informacion {
-        padding:20px;
-    }
-
-    } */
 }
 
 
