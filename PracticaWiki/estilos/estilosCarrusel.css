@@ -1,0 +1,24 @@
+@import url(estilos-generales.css);
+@import url(estilosHwei.css);
+
+
+h3 {
+    font-size: var(--font-titulo);
+    color: red;
+}
+/* .carrusel {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.ficha-carrusel {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+} */

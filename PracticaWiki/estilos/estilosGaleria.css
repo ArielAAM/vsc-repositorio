@@ -1,0 +1,43 @@
+@import url(estilosHwei.css);
+
+.carrusel {
+    display: flex;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+    flex-grow: 1; 
+    column-gap: 300px;
+    row-gap: 50px;
+    justify-content:space-evenly;
+    height: 90vh;
+    width: 90vw;
+    
+}
+/* .carrusel:last-child > .imagen-carrusel img{
+    width: 1000px;
+} */
+.ficha-carrusel {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 20vw;
+    background-color: var(--color4);
+    align-items: center;
+    padding: 20px;
+    box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
+    -moz-box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
+
+}
+
+.ficha-carrusel h3 {
+        font-size: var(--font-grande);
+}
+.imagen-carrusel img {
+    width: 30vw;
+    border: solid 1px white;
+}
+
+.ficha-carrusel:nth-child(9) .imagen-carrusel img {
+    width: 70vw;
+}
