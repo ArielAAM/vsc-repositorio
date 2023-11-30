@@ -59,8 +59,13 @@ body {
 }
 .wik-informacion , .wik-informacion a{
     color: var(--colorshade1);
-    
 }
+
+
+/* .division {
+    width: 90vw;
+    height: 900px;
+} */
 
 
 

@@ -2,10 +2,54 @@
 @import url(estilosHwei.css);
 
 
-h3 {
-    font-size: var(--font-titulo);
-    color: red;
+.carrusel {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    height: 600px;
+    flex-grow: 1;
+    
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
 }
+
+.ficha-carrusel {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    height: 60vh;
+    top: 1px;
+    justify-content: space-evenly;
+    background-color: var(--colorshade2);
+    align-items: center;
+    position: absolute; 
+    transform: translateX(-120%);
+    transition: transform .8s ease-in-out;   
+    border-radius: 50px;
+    box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
+    -moz-box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
+}
+.imagen-carrusel {
+    display: flex;
+    flex-direction: column;
+}
+.imagen-carrusel img {
+    align-self: center;
+    width: 47vw; 
+    display: block;
+    border-radius: 30px;
+}
+
+h3 {
+    color: var(--color4);
+}
+
+
+
 /* .carrusel {
     display: flex;
     flex-direction: row;
