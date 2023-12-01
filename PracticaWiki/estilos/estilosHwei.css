@@ -61,11 +61,39 @@ body {
     color: var(--colorshade1);
 }
 
+@media screen and (320px <= width <= 780px) {
+    .contenido-secundario {
+        align-self: center;
+    }
 
-/* .division {
-    width: 90vw;
-    height: 900px;
-} */
+    .title {
+        font-size: var(--font-mediano-pequeno);
+        margin-left: 10px;
+    }
+    .detalles {
+        flex-direction: column;
+    }
+    .detalles span {
+        font-size: var(--font-pequeno);
+    }
 
+    .imagen-boton {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .imagen-boton img {
+        width: 300px;
+        align-self: center;
+    }
+    .titulo-botones {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
 
 

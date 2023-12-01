@@ -15,10 +15,12 @@ window.onload = function() {
 
         switch (hojaCss[hojaCss.length - 1]){
             case "estilosGaleria.css":
+                carruselInicio();
                 hrefEstilos.href = "../estilos/estilosCarrusel.css";
                 boton.lastElementChild.textContent = "vista galeria";
                 break;
             case "estilosCarrusel.css":
+                carruselParar();
                 hrefEstilos.href = "../estilos/estilosGaleria.css";
                 boton.lastElementChild.textContent = "vista carrusel";
         }

@@ -41,3 +41,17 @@
 .ficha-carrusel:nth-child(9) .imagen-carrusel img {
     width: 70vw;
 }
+
+@media screen and (320px <= width <= 780px) {
+    .imagen-carrusel img {
+        width: 80vw;
+    }
+
+    .info-carrusel h3{
+        font-size: var(--font-mediano-pequeno);
+    }
+
+    .ficha-carrusel:nth-child(9) .imagen-carrusel img {
+        width: 80vw;
+    }
+}

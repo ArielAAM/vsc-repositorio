@@ -26,7 +26,7 @@
     background-color: var(--colorshade2);
     align-items: center;
     position: absolute; 
-    transform: translateX(-120%);
+    transform: translateY(120%);
     transition: transform .8s ease-in-out;   
     border-radius: 50px;
     box-shadow: 19px 11px 19px 0px rgba(0,0,0,0.69);
@@ -48,7 +48,36 @@ h3 {
     color: var(--color4);
 }
 
+@media screen and (320px <= width <= 780px) {
+    .carrusel {
+        height: 600px;
+        width: 90vw;
+    }
 
+    .ficha-carrusel {
+        width: 80vw;
+        height: 55vh;
+        transform: translateY(150%);
+        gap: -100px;
+    }
+
+    .imagen-carrusel img {
+        width: 75vw;
+        margin-bottom: -40px;
+    }
+
+    .info-carrusel{
+        width: 80vw;
+        /* align-items: center;
+        justify-content: center; */
+    }
+
+    .info-carrusel h3 {
+        font-size: var(--font-mediano-pequeno);
+        margin-left: 10px;
+        
+    }
+}
 
 /* .carrusel {
     display: flex;
