@@ -2,6 +2,8 @@
 
 body {
     z-index: 0;
+    display: flex;
+    flex-direction: column;
 }
 /*estilos para el menu escondido*/
 .menu-escondido {
@@ -31,7 +33,7 @@ body {
     top: -450px;
     left: 0;
     transition: top .3s linear;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -79,7 +81,7 @@ body {
     top: 0;
     left: 0;
     transition: all .8 linear;
-    /* z-index: -1; */
+    z-index: 1;
 }
 
 .pon-velo {
@@ -106,7 +108,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
- 
+    z-index: 1;
 }
 
 .header {
@@ -166,7 +168,7 @@ body {
     justify-content: center;
     position: relative;
     gap: 5px;
-    
+    z-index: 1;
 }
 
 .menu-principal > .celda .informacion {

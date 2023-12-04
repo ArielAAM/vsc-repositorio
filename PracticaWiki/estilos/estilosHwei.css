@@ -50,8 +50,9 @@ body {
     
 }
 
-.detalles img {
+.imagen-boton img {
     border-radius: 20px;
+    width: 30vw;
 }
 
 .wik-velo {
@@ -93,6 +94,9 @@ body {
         flex-direction: column;
     }
 
+    .principal{
+        gap: 20px;
+    }
 
 }
 

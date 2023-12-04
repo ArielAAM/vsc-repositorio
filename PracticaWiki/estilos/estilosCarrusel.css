@@ -1,7 +1,9 @@
 @import url(estilos-generales.css);
 @import url(estilosHwei.css);
 
-
+.division {
+    display: flex;
+}
 .carrusel {
     display: flex;
     flex-direction: row;
@@ -13,7 +15,7 @@
     align-items: center;
     overflow: hidden;
     position: relative;
-    margin: 10px auto;
+    margin: 50px auto;
 }
 
 .ficha-carrusel {
@@ -48,50 +50,46 @@ h3 {
     color: var(--color4);
 }
 
+.info-carrusel {
+    display: flex;
+}
 @media screen and (320px <= width <= 780px) {
-    .carrusel {
+    .division {
         height: 600px;
+    }
+    .carrusel {
+        height: 85vh;
         width: 90vw;
+        
     }
 
     .ficha-carrusel {
         width: 80vw;
-        height: 55vh;
-        transform: translateY(150%);
-        gap: -100px;
+        height: 80vh;
+        transform: translateY(165%);
     }
 
     .imagen-carrusel img {
-        width: 75vw;
-        margin-bottom: -40px;
+        width: 60vw;
+        /* margin-top: 20px; */
+        /* margin-bottom: -40px; */
     }
 
     .info-carrusel{
         width: 80vw;
-        /* align-items: center;
-        justify-content: center; */
+        align-items: center;
+        justify-content: center;
+        /* margin-bottom: 20px; */
     }
+
 
     .info-carrusel h3 {
         font-size: var(--font-mediano-pequeno);
         margin-left: 10px;
         
     }
+
+    
 }
 
-/* .carrusel {
-    display: flex;
-    flex-direction: row;
-    width: 700px;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-}
 
-.ficha-carrusel {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-} */
