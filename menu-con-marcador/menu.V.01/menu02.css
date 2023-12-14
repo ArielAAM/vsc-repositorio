@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Rampart+One&display=swap');
+
+:root {
+    --fuente-logo-cap: 'Rampart One', sans-serif;
+    --fuente-logo: 'Kalam', cursive;
+}
+
+* {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background-color: #09345D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+
+.logo p:first-of-type {
+    color: rgb(176, 172, 172);
+    font-family: var(--fuente-logo);
+    font-size: 2em;
+}
+
+.logo p:last-of-type {
+    color: #c0b8e0;
+    font-size: 1.2em;
+}
+
+.logo p span {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 5px;
+}
+
+.logo p span:first-of-type {
+    color: pink;
+    transform: rotate(20deg);
+}
+
+.logo p span:last-of-type {
+    color: #FFAF0A;
+    transform: rotate(-10deg);
+}
+
+.marcador {
+    height: inherit;
+    width: 0;
+    position: absolute;
+    background-color: #A4C628;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    /* transition: all 0.8s cubic-bezier(0.0075, -0.95, 0.100, 1.5); */
+    z-index: 1;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: inherit;
+}
+
+ul li {
+    color: rgb(222, 218, 218);
+    cursor: pointer;
+    font-size: 1.2em;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
