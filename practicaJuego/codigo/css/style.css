@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+}
+
+.casilla {
+    display: flex;
+    flex-grow: 1;
+}
